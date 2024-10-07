@@ -17,4 +17,15 @@ describe("QueryProcessor", () => {
             "writer in the English language and the world's pre-eminent dramatist."
           ));
     });
+
+    test('should return andrew id description', () => {
+        const query = "andrew id";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "Andrew ID's are unique identifiers assigned to all students at " +
+            "Carnegie Mellon University. They are used as a student ID and " +
+            "generally comprise of some part of both a student's first and last " +
+            "name."
+          ));
+    });
 });
